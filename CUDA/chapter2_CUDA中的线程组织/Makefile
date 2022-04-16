@@ -15,5 +15,7 @@ hello4: hello4.cu
 hello5: hello5.cu
 	nvcc hello5.cu -o hello5
 
+.PHONY: clean
+
 clean:
-	rm hello1 hello2 hello3 hello4 hello5
+	rm -rf hello1 hello2 hello3 hello4 hello5

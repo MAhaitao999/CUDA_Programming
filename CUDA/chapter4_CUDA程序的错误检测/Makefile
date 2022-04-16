@@ -8,5 +8,8 @@ check2kernel: check2kernel.cu
 
 memcheck: memcheck.cu
 	nvcc memcheck.cu -o memcheck
+
+.PHONY: clean
+
 clean:
-	rm check1api check2kernel memcheck
+	rm -rf check1api check2kernel memcheck

@@ -15,5 +15,7 @@ add3if: add3if.cu
 add4device: add4device.cu
 	nvcc add4device.cu -o add4device
 
+.PHONY: clean
+
 clean:
-	rm add add1 add2wrong add3if add4device
+	rm -rf add add1 add2wrong add3if add4device
