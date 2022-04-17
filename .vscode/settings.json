@@ -4,7 +4,8 @@
         "istream": "cpp",
         "limits": "cpp",
         "ostream": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "system_error": "cpp"
     },
 
     "editor.fontSize": 20
