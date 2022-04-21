@@ -1,13 +1,13 @@
 all: reduce neighbor1cpu neighbor2gpu
 
 reduce: reduce.cu
-	nvcc -arch=sm_50 reduce.cu -o reduce
+	nvcc -g -arch=sm_50 reduce.cu -o reduce
 
 neighbor1cpu: neighbor1cpu.cu
-	nvcc -arch=sm_50 neighbor1cpu.cu -o neighbor1cpu
+	nvcc -g -arch=sm_50 neighbor1cpu.cu -o neighbor1cpu
 
 neighbor2gpu: neighbor2gpu.cu
-	nvcc -arch=sm_50 neighbor2gpu.cu -o neighbor2gpu
+	nvcc -g -arch=sm_50 neighbor2gpu.cu -o neighbor2gpu
 
 .PHONY: clean
 
