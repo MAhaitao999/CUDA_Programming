@@ -1,4 +1,4 @@
-all: simpleHyperqOpenmp simpleMultiAddBreadth simpleMultiAddDepth host-kernel kernel-kernel kernel-transfer
+all: simpleHyperqOpenmp simpleMultiAddBreadth simpleMultiAddDepth host-kernel kernel-kernel kernel-transfer pinMemTransfer
 
 simpleHyperqOpenmp: simpleHyperqOpenmp.cu
 	nvcc -O3 -Xcompiler -fopenmp simpleHyperqOpenmp.cu -o simpleHyperqOpenmp -lgomp
@@ -18,7 +18,10 @@ kernel-kernel: kernel-kernel.cu
 kernel-transfer: kernel-transfer.cu
 	nvcc -O3 -Xcompiler -fopenmp kernel-transfer.cu -o kernel-transfer -lgomp
 
+pinMemTransfer: pinMemTransfer.cu
+	nvcc -O3 pinMemTransfer.cu -o pinMemTransfer
+
 .PHONY: clean
 
 clean:
-	rm -rf simpleHyperqOpenmp simpleMultiAddBreadth simpleMultiAddDepth host-kernel kernel-kernel kernel-transfer
+	rm -rf simpleHyperqOpenmp simpleMultiAddBreadth simpleMultiAddDepth host-kernel kernel-kernel kernel-transfer pinMemTransfer
