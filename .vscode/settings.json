@@ -6,7 +6,8 @@
         "ostream": "cpp",
         "stdexcept": "cpp",
         "system_error": "cpp",
-        "cstdint": "cpp"
+        "cstdint": "cpp",
+        "cstdlib": "cpp"
     },
 
     "editor.fontSize": 20
